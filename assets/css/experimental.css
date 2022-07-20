@@ -1,0 +1,16 @@
+#test-img {
+    width: 80%;
+    height: 300px;
+    border: 1px dotted black;
+    overflow: hidden;
+    display: inline-block;
+}
+
+main {
+    text-align: center;
+}
+
+#test-img img{
+    width: 100%;
+    object-fit: cover;
+}
