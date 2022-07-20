@@ -215,6 +215,11 @@ hr {
     justify-self: end;
   }
 
+  #menu-no-animation a {
+    padding: 0.5rem 1rem;
+    border-radius: 5%;
+  }
+
   /* START OF HAMBURGER MENU (waiting until we can use JS to complete) */
   #menu {
     width: 35px;

@@ -5,15 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me | Vince Ermitano</title>
-    <link rel="stylesheet" href="./assets/css/myStyle.css">
-    <link rel="stylesheet" href="./assets/css/contact.css">
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <!-- <link rel="stylesheet" href="./assets/css/contact.css"> -->
     <link rel="icon" href="./assets/images/icons8-contact-16.png">
+
+    <style>
+        main {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        main h1 {
+            padding: 0 1rem 2rem 0;
+            font-size: 2.25rem;
+        }
+
+        main h1 img {
+            display: inline-block;
+            height: 2.25rem;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input {
+            width: 30%;
+        }
+
+        textarea {
+            width: 30%;
+        }
+
+        button {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border-width: 0px;
+            transition: var(--ease-in-transition);
+        }
+
+        button:hover {
+            background-color: var(--bright-coral);
+            transform: scale(1.1);
+            color: white;
+        }
+
+        main {
+            padding-bottom: 12rem;
+        }
+
+        @media only screen and (max-width: 480px) {
+            input, textarea {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <figure>
             <a href="index.html">
-                <img src="./assets/images/profile-pic.png" alt="Image of logo" width="30">
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
                 <span>Vince Ermitano</span>
             </a> 
         </figure>
@@ -29,7 +82,7 @@
         </nav>
 
         <nav class="nav-mobile">
-            <input type="checkbox" name="" id="check" />
+            <!-- <input type="checkbox" name="" id="check" /> -->
             <div id="menu">
                 <div id=bar1 class="bar"></div>
                 <div id=bar2 class="bar"></div>
@@ -47,14 +100,14 @@
     </header>
     
     <!-- Update with hamburger menu in JS iteration -->
-    <section id="menu-no-animation">
+    <div id="menu-no-animation">
         <ul>
             <li><a href="index.html" title="Go to Homepage">Home</a></li>
             <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
             <li><a href="about.html" title="Go to About Page">About Me</a></li>
             <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
         </ul>
-    </section>
+    </div>
 
     <main>
         <h1>Get in Touch! <span><img src="./assets/images/icons8-contact-64.png" alt="Icon of a mailbox"></span></h1>

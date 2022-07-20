@@ -5,16 +5,244 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Vince Ermitano</title>
-    <link rel="stylesheet" href="./assets/css/myStyle.css">
-    <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <!-- <link rel="stylesheet" href="./assets/css/about.css"> -->
     <link rel="icon" href="./assets/images/icons8-about-me-male-32.png">
+
+    <style>
+        /* General styles */
+        main section {
+            display: grid;
+            grid-template: 1fr / 1fr 1fr;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            justify-content: center;
+        }
+
+        section div * {
+            margin: 1rem;
+        }
+
+        section > div {
+            width: 80%;
+            justify-self: center;
+        }
+
+        section > div {
+            align-self: center;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        section figure {
+            text-align: center;
+            justify-self: center;
+            width: 80%;
+        }
+
+        hr {
+            display: none;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        main img {
+            border-radius: 5%;
+        }
+
+        .flipped > div {
+            grid-row: 1 / 1;
+            grid-column: 2 / 2;
+        }
+
+        .flipped > figure {
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+        }
+
+        .skinny {
+            width: 50%;
+        }
+
+        /* Intro section */
+        #intro h1 img {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        #intro div {
+            text-align: start;
+        }
+
+        #intro div, #intro figure{
+            width: 80%;
+            align-self: center;
+        }
+
+        #intro figure {
+            text-align: center;
+            justify-self: center;
+        }
+
+        #intro figure img {
+            border-radius: 50%;
+        }
+
+        /* Technologies section */
+        #technologies {
+            align-items: center;
+        }
+
+        #technologies div.lists {
+            display: grid;
+            grid-template: 1fr / 1fr 1fr;
+        }
+
+        div.lists {
+            margin: 0;
+        }
+
+        /* Experience section */
+        #experience-section figure{
+            text-align: left;
+        }
+
+        #experience-section div{
+            text-align: center;
+        }
+
+        #experience-section div {
+            /* width: 50%; */
+        }
+
+        /* Goals section */
+        .flipped > div {
+            grid-row: 1 / 1;
+            grid-column: 2 / 2;
+        }
+
+        .flipped > figure {
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+        }
+
+        /* Hobbies section */
+        #hobbies-section figure {
+            text-align: left;
+        }
+
+        #hobbies-section div {
+            text-align: center;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 820px) {
+            #technologies {
+                grid-template: 1fr / 1fr 1fr;
+            }
+
+            section figure {
+                align-self: center;
+            }
+            section figure img{
+                width: 100%;
+            }
+
+            #goals-and-interests h2, #goals-and-interests p {
+                margin: 1rem 0;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            main section {
+                display: grid;
+                grid-template: 1fr 1fr / 1fr;
+                padding: 1rem;
+            }
+
+            #intro h1 img {
+                display: inline-block;
+                margin: 0;
+            }
+
+            #intro div {
+                text-align: center;
+            }
+            
+
+            main section, main div {
+                text-align: center;
+                align-self: center;
+            }
+
+            section figure, section > div {
+                text-align: center;
+                justify-self: center;
+                width: 90%;
+            }
+
+            section div > p {
+                text-align: center;
+                margin: 0;
+            }
+
+            main figure {
+                display: flex;
+            }
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+            }
+
+            section > div {
+                grid-row: 2 / 2;
+            }
+
+            .flipped > div {
+                grid-row: 2 / 2;
+                grid-column: 1 / 1;
+            }
+            
+            .flipped > figure {
+                grid-row: 1 / 1;
+                grid-column: 1 / 1;
+            }
+
+            #hobbies-section div {
+                align-self: flex-start;
+                text-align: center;
+            }
+
+            section#technologies.flipped{
+                justify-self: center;
+                text-align: center;
+                /* width: 100%; */
+                grid-template: 1fr 1fr / 1fr;
+            }
+
+            .skinny {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <figure>
             <a href="index.html">
-                <img src="./assets/images/profile-pic.png" alt="Image of logo" width="30">
-                <span>Vince Ermitano</span>
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
             </a> 
         </figure>
 
@@ -29,7 +257,7 @@
         </nav>
 
         <nav class="nav-mobile">
-            <input type="checkbox" name="" id="check" />
+            <!-- <input type="checkbox" name="" id="check" /> -->
             <div id="menu">
                 <div id=bar1 class="bar"></div>
                 <div id=bar2 class="bar"></div>
@@ -48,14 +276,14 @@
     </header>
 
     <!-- Update with hamburger menu in JS iteration -->
-    <section id="menu-no-animation">
+    <div id="menu-no-animation">
         <ul>
             <li><a href="index.html" title="Go to Homepage">Home</a></li>
             <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
             <li><a href="about.html" title="Go to About Page">About Me</a></li>
             <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
         </ul>
-    </section>
+    </div>
 
     <main>
         <section id="intro">
@@ -68,7 +296,7 @@
                 </p>
             </div>
             <figure>
-                <img src="./assets/images/about-img1.png" alt="Image of Vince Ermitano" width="300">
+                <img src="./assets/images/about-img1.webp" alt="Image of Vince Ermitano" width="300">
             </figure>
         </section>
 
@@ -115,7 +343,7 @@
         </section>
 
         <section class="flipped">
-            <div>
+            <div id="goals-and-interests">
                 <h2>Goals/Interests</h2>
                 <p>Currently, I am really interested in Web Development.
                     Both the front-end and back-end are intriguing to me so I would

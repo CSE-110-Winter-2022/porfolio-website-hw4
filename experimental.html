@@ -5,14 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experimental | Vince Ermitano</title>
-    <link rel="stylesheet" href="./assets/css/myStyle.css">
-    <link rel="stylesheet" href="./assets/css/experimental.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <!-- <link rel="stylesheet" href="./assets/css/experimental.css" media="screen" type="text/css"> -->
+
+    <style>
+        #test-img {
+            width: 80%;
+            height: 300px;
+            border: 1px dotted black;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        #test-img img{
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <header>
         <figure>
             <a href="index.html">
-                <img src="./assets/images/profile-pic.png" alt="Image of logo" width="30">
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
                 <span>Vince Ermitano</span>
             </a> 
         </figure>
@@ -28,7 +47,7 @@
         </nav>
 
         <nav class="nav-mobile">
-            <input type="checkbox" name="" id="check" />
+            <!-- <input type="checkbox" name="" id="check" /> -->
             <div id="menu">
                 <div id=bar1 class="bar"></div>
                 <div id=bar2 class="bar"></div>
@@ -46,14 +65,14 @@
     </header>
 
     <!-- Update with hamburger menu in JS iteration -->
-    <section id="menu-no-animation">
+    <div id="menu-no-animation">
         <ul>
             <li><a href="index.html" title="Go to Homepage">Home</a></li>
             <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
             <li><a href="about.html" title="Go to About Page">About Me</a></li>
             <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
         </ul>
-    </section>
+    </div>
 
     <main>
         <h1>TESTING AREA</h1>
