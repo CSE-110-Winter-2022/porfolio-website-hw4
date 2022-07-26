@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me | Vince Ermitano</title>
+    <script type="module" src="./assets/js/contact.js"></script>
     <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
     <!-- <link rel="stylesheet" href="./assets/css/contact.css"> -->
+    <link rel="icon" href="./assets/images/icons8-contact-16.png">
     <link rel="icon" href="./assets/images/icons8-contact-16.png">
 
     <style>
@@ -16,8 +18,11 @@
         }
 
         main h1 {
-            padding: 0 1rem 2rem 0;
+            padding: 0 1rem 0 0;
+            margin-bottom: 2rem;
             font-size: 2.25rem;
+            border-radius: 1rem;
+            background-color: white;
         }
 
         main h1 img {
@@ -114,7 +119,7 @@
     </div>
 
     <main>
-        <h1>Get in Touch! <span><img src="./assets/images/icons8-contact-64.png" alt="Icon of a mailbox"></span></h1>
+        <h1>Get in Touch! <span><img src="./assets/images/telegram-app-shake.gif" alt="Icon of a mailbox"></span></h1>
         <form id="contactForm">
             <div id="nameInputSection">
                 <label for="fullnameFld"><strong>Full Name</strong></label>
@@ -136,6 +141,11 @@
         </form>
         <br />
         <button type="submit" form="contactForm">Send Message</button>
+
+        <dialog>
+            <h2>Your message has been sent!</h2>
+            <p>I will try to respond as soon as possible!</p>
+        </dialog>
     </main>
 
     <hr />
