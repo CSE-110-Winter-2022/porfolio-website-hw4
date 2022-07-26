@@ -4,61 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me | Vince Ermitano</title>
+    <title>Simple CRUD</title>
+    <script type="module" src="./blog.js"></script>
     <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
-    <!-- <link rel="stylesheet" href="./assets/css/contact.css"> -->
-    <link rel="icon" href="./assets/images/icons8-contact-16.png">
-
     <style>
-        main {
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        main h1 {
-            padding: 0 1rem 2rem 0;
-            font-size: 2.25rem;
-        }
-
-        main h1 img {
-            display: inline-block;
-            height: 2.25rem;
-        }
-
-        form {
-            text-align: center;
-        }
-
-        input {
-            width: 30%;
-        }
-
-        textarea {
-            width: 30%;
-        }
-
-        button {
-            padding: 0.5rem;
-            font-size: 1rem;
-            border-radius: 5px;
-            border-width: 0px;
-            transition: var(--ease-in-transition);
-        }
-
-        button:hover {
-            background-color: var(--bright-coral);
-            transform: scale(1.1);
-            color: white;
+        div {
+            border: 1px solid blue;
+            margin: 1rem;
         }
 
         main {
-            padding-bottom: 12rem;
-        }
-
-        @media only screen and (max-width: 480px) {
-            input, textarea {
-                width: 90%;
-            }
+            background-color: white;
         }
     </style>
 </head>
@@ -114,31 +70,22 @@
     </div>
 
     <main>
-        <h1>Get in Touch! <span><img src="./assets/images/icons8-contact-64.png" alt="Icon of a mailbox"></span></h1>
-        <form id="contactForm">
-            <div id="nameInputSection">
-                <label for="fullnameFld"><strong>Full Name</strong></label>
-                <br />
-                <input type="text" maxlength="40" name="fullnameFld" id="fullnameFld" required autofocus>
-            </div>
-            <br />
-            <div id="emailInputSection">
-                <label for="emailFld"><strong>Email</strong></label>
-                <br />
-                <input type="email" name="emailFld" id="emailFld" required maxlength="64">
-            </div>
-            <br />
-            <div id="messageInputSection">
-                <label for="message"><b>Your Message</b></label>
-                <br />
-                <textarea id="message" name="message" rows="10" cols="50" placeholder="Enter here" required maxlength="32000"></textarea>
-            </div>
-        </form>
-        <br />
-        <button type="submit" form="contactForm">Send Message</button>
-    </main>
+        <dialog>
+            <form id="myForm" method="get">
+                <label for="titleFld">Post Title</label>
+                <input type="text" name="titleFld" id="titleFld" maxlength="50" required>
+                <label for="dateFld">Post Date</label>
+                <input type="date" name="dateFld" id="dateFld" required>
+                <label for="summaryFld">Post Summary</label>
+                <textarea name="summaryFld" id="summaryFld" cols="30" rows="10"></textarea>
+            </form>
+            <button id="cancel-button" type="button">Cancel Form</button>
+            <button id="send-button" type="submit" form="myForm">Send Form</button>
+        </dialog>
 
-    <hr />
+        <h1>Blog Posts:</h1>
+        <button id="add-button">Add Post</button>
+    </main>
 
     <footer>
         <icon-group>
