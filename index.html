@@ -7,6 +7,7 @@
     <title>Home | Vince Ermitano</title>
     <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
     <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
+    <script src="https://kit.fontawesome.com/8cc61868ab.js" crossorigin="anonymous" defer></script>
     <link rel="icon" href="./assets/images/icons8-homepage-16.png">
 
     <style>
@@ -67,10 +68,11 @@
             white-space: nowrap;
             height: 3rem;
             background-color: var(--golden);
+            border-radius: 1rem;
             animation: openclose 10s ease-in-out infinite;
         }
         .replace-text {
-            margin: 0;
+            margin: 0 0.5rem;
             position: relative;
             top: inherit;
         }
@@ -104,12 +106,12 @@
             }
 
             15% {
-                width: 19rem;
+                width: 19.5rem;
                 top: 0;
             }
 
             40% {
-                width: 19rem;
+                width: 19.5rem;
                 top: 0;
             }
 
@@ -124,12 +126,12 @@
             }
 
             65% {
-                width: 21.5rem;
+                width: 22.5rem;
                 top: -3rem;
             }
 
             85% {
-                width: 21.5rem;
+                width: 22.5rem;
                 top: -3rem;
             }
 
@@ -225,47 +227,47 @@
             @keyframes openclose {
                 0% {
                     width: 0;
-                    top: 0;
+                    top: 0.3rem;
                 }
 
                 10% {
                     width: 0;
-                    top: 0;
+                    top: 0.3rem;
                 }
 
                 15% {
                     width: 15rem;
-                    top: 0;
+                    top: 0.3rem;
                 }
 
                 40% {
                     width: 15rem;
-                    top: 0;
+                    top: 0.3rem;
                 }
 
                 50% {
                     width: 0;
-                    top: 0;
+                    top: 0.3rem;
                 }
 
                 60% {
                     width: 0;
-                    top: -2.5rem;
+                    top: -2rem;
                 }
 
                 65% {
                     width: 18rem;
-                    top: -2.5rem;
+                    top: -2rem;
                 }
 
                 85% {
                     width: 18rem;
-                    top: -2.5rem;
+                    top: -2rem;
                 }
 
                 100% {
                     width: 0;
-                    top: -2.5rem;
+                    top: -2rem;
                 }
             }
         }
@@ -343,8 +345,10 @@
 
     <footer>
         <icon-group>
-            <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
-            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a>
+            <i class="fa-brands fa-github" onclick="window.open('https://github.com/','_blank')"></i>
+            <i class="fa-brands fa-linkedin" onclick="window.open('https://github.com/','_blank')"></i>
+            <!-- <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
+            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a> -->
         </icon-group>
     </footer>
 </body>

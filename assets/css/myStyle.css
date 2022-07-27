@@ -189,6 +189,20 @@ hr {
     display: none;
 }
 
+footer i {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  transition: var(--ease-in-transition);
+}
+
+footer i:hover {
+  cursor: pointer;
+  color: var(--golden);
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  transform: scale(1.1);
+}
+
 
 @keyframes slideInFromBottom {
   0% {

@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me | Vince Ermitano</title>
     <script type="module" src="./assets/js/contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('g_pCeElPc632TK0As');
+        })();
+    </script>
     <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
-    <!-- <link rel="stylesheet" href="./assets/css/contact.css"> -->
-    <link rel="icon" href="./assets/images/icons8-contact-16.png">
+    <script src="https://kit.fontawesome.com/8cc61868ab.js" crossorigin="anonymous" defer></script>
     <link rel="icon" href="./assets/images/icons8-contact-16.png">
 
     <style>
@@ -18,7 +24,8 @@
         }
 
         main h1 {
-            padding: 0 1rem 0 0;
+            display: inline-block;
+            padding: 1rem;
             margin-bottom: 2rem;
             font-size: 2.25rem;
             border-radius: 1rem;
@@ -28,6 +35,7 @@
         main h1 img {
             display: inline-block;
             height: 2.25rem;
+            vertical-align: middle;
         }
 
         form {
@@ -142,9 +150,13 @@
         <br />
         <button type="submit" form="contactForm">Send Message</button>
 
-        <dialog>
+        <dialog id="success-dialog">
             <h2>Your message has been sent!</h2>
             <p>I will try to respond as soon as possible!</p>
+        </dialog>
+        <dialog id="fail-dialog">
+            <h2>There was an error sending your message...</h2>
+            <p>Please try again</p>
         </dialog>
     </main>
 
@@ -152,8 +164,10 @@
 
     <footer>
         <icon-group>
-            <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
-            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a>
+            <i class="fa-brands fa-github" onclick="window.open('https://github.com/','_blank')"></i>
+            <i class="fa-brands fa-linkedin" onclick="window.open('https://github.com/','_blank')"></i>
+            <!-- <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
+            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a> -->
         </icon-group>
     </footer>
 </body>
